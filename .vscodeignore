@@ -3,7 +3,7 @@ out/test/**
 out/**.map
 resources/**
 scripts/**
-!resources/logo.png
+!resources/logo1.png
 dev/*
 
 tsconfig.json

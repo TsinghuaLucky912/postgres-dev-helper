@@ -884,7 +884,6 @@ export class Configuration {
         TopLevelSection: this.ExtensionName,
         NodeTagFiles: 'nodeTagFiles',
         LogLevel: 'logLevel',
-        PgbsdindentPath: 'pg_bsd_indentPath',
         SrcPath: 'srcPath'
     };
     static Commands = {
@@ -892,7 +891,6 @@ export class Configuration {
         OpenConfigFile: `${this.ExtensionName}.openConfigurationFile`,
         RefreshPostgresVariables: `${this.ExtensionName}.refreshPostgresVariablesView`,
         RefreshConfigFile: `${this.ExtensionName}.refreshConfigFile`,
-        FormatterDiffView: `${this.ExtensionName}.formatterShowDiff`,
         AddToWatchView: `${this.ExtensionName}.addVariableToWatch`,
     };
     static Views = {
@@ -909,10 +907,6 @@ export class Configuration {
     static getCustomNodeTagFiles() {
         return this.getConfig<string[]>(this.ConfigSections.NodeTagFiles);
     };
-
-    static getCustomPgbsdindentPath() {
-        return this.getConfig<string>(this.ConfigSections.PgbsdindentPath);
-    }
 
     static getSrcPath() {
         return this.getConfig<string>(this.ConfigSections.SrcPath);

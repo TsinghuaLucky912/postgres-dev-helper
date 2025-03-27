@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 import * as vars from './variables';
 import * as utils from './utils';
-import * as formatter from './formatter';
 import {
     NodePreviewTreeViewProvider as PgVariablesView,
     Configuration as config,
@@ -99,8 +98,6 @@ export function activate(context: vscode.ExtensionContext) {
         setupExtension(context, specialMembers, nodeVars, debug, logger, nodesView);
                 
         setupDebugger(nodesView, logger, debug, context);
-
-        formatter.registerFormatting(logger);
 
         config.setExtensionActive(true);
 

@@ -2,7 +2,7 @@
     "name": "kingbase-debug-helper",
     "displayName": "kingBase Debug Helper",
     "description": "Extension to assist Postgres hackers - source code developers",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -11,7 +11,7 @@
         "Formatters",
         "Other"
     ],
-    "icon": "resources/logo.png",
+    "icon": "resources/logo1.png",
     "activationEvents": [
         "workspaceContains:.vscode/kingbase_debug_helper.json",
         "workspaceContains:**/src/include/cbb/server_cbb/basestruct/kdb_nodes.h"
@@ -61,12 +61,6 @@
                 "category": "Ksql"
             },
             {
-                "command": "kingbase-debug-helper.formatterShowDiff",
-                "title": "Show diff preview for kingBase formatter",
-                "shortTitle": "Diff kingBase formatter",
-                "category": "Ksql"
-            },
-            {
                 "command": "kingbase-debug-helper.addVariableToWatch",
                 "title": "Add Variable to Watch",
                 "shortTitle": "Add to Watch",
@@ -113,7 +107,7 @@
             "debug": [
                 {
                     "id": "kingbase-debug-helper.node-tree-view",
-                    "name": "pg variables",
+                    "name": "kb variables",
                     "type": "tree",
                     "visibility": "visible",
                     "when": "inDebugMode && kingbase-debug-helper:activated"
@@ -141,11 +135,6 @@
                     ],
                     "default": "INFO",
                     "description": "Minimum level of log messages to display in Output view. For VS Code version greater 1.74.0 use log level in Output channel panel"
-                },
-                "kingbase-debug-helper.pg_bsd_indentPath": {
-                    "title": "Path to pg_bsd_indent",
-                    "type": "string",
-                    "description": "Path to pg_bsd_indent executable used to format file.\nIf not specified, pg_bsd_indent will be search in all available location, and maybe built"
                 },
                 "kingbase-debug-helper.srcPath": {
                     "title": "Path to root of kingBase source files",
