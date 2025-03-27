@@ -676,14 +676,14 @@ async function bootstrapExtensionCommand() {
                 'use strict;',
                 'use warnings;',
                 '',
-                'use PostgreSQL::Test::Cluster;',
-                'use PostgreSQL::Test::Utils;',
+                'use kingBase::Test::Cluster;',
+                'use kingBase::Test::Utils;',
                 'use Test::More tests => 1;',
                 '',
-                'my $node = PostgreSQL::Test::Cluster->new(\'main\');',
+                'my $node = kingBase::Test::Cluster->new(\'main\');',
                 '$node->init;',
                 flags.c 
-                    ? `$node->append_conf(\'postgresql.conf\', qq{shared_preload_libraries=\'${name}\'});` 
+                    ? `$node->append_conf(\'kingbase.conf\', qq{shared_preload_libraries=\'${name}\'});` 
                     : '',
                 '$node->start;',
                 '',
@@ -1088,8 +1088,8 @@ export function getCurrentLogLevel() {
 }
 
 export class Configuration {
-    static ExtensionName = 'postgresql-hacker-helper';
-    static ExtensionPrettyName = 'PostgreSQL Hacker Helper';
+    static ExtensionName = 'kingbase-debug-helper';
+    static ExtensionPrettyName = 'kingBase Debug Helper';
     static ConfigSections = {
         TopLevelSection: this.ExtensionName,
         NodeTagFiles: 'nodeTagFiles',
@@ -1109,8 +1109,8 @@ export class Configuration {
     static Views = {
         NodePreviewTreeView: `${this.ExtensionName}.node-tree-view`,
     };
-    static ExtensionSettingsFileName = 'pgsql_hacker_helper.json';
-    /* Path to custom typedefs file in pgsql_hacker_helper.json file */
+    static ExtensionSettingsFileName = 'kingbase_debug_helper.json';
+    /* Path to custom typedefs file in kingbase_debug_helper.json file */
     static CustomTypedefsFile: vscode.Uri | undefined = undefined;
 
     static getLogLevel() {

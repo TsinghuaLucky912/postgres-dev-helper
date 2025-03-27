@@ -361,7 +361,7 @@ class PgindentDocumentFormatterProvider implements vscode.DocumentFormattingEdit
             try {
                 this.logger.info('cloning pg_bsd_indent repository');
                 await utils.execShell(
-                    'git', ['clone', 'https://git.postgresql.org/git/pg_bsd_indent.git'],
+                    'git', ['clone', 'https://git.kingbase.org/git/pg_bsd_indent.git'],
                     {cwd: utils.getWorkspacePgSrcFile(workspace.uri, 'src', 'tools', 'pgindent').fsPath});
             } catch (error) {
                 throw new Error(`failed to git clone pg_bsd_indent repository: ${error}`);
@@ -569,7 +569,7 @@ class PgindentDocumentFormatterProvider implements vscode.DocumentFormattingEdit
                 return typedefsFile;    
             }
 
-            const url = 'https://buildfarm.postgresql.org/cgi-bin/typedefs.pl';
+            const url = 'https://buildfarm.kingbase.org/cgi-bin/typedefs.pl';
             this.logger.info('downloading typedefs file from %s', url);
             await utils.execShell('wget', ['-O', typedefsFile.fsPath, url]);
 
@@ -639,7 +639,7 @@ function registerDiffCommand(logger: utils.ILogger,
         }
         
         try {
-            await vscode.commands.executeCommand('vscode.diff', document.uri, parsed, 'PostgreSQL formatting')
+            await vscode.commands.executeCommand('vscode.diff', document.uri, parsed, 'kingBase formatting')
         } catch (err) {
             logger.error(`failed to show diff for document %s`, document.uri.fsPath, err);
             vscode.window.showErrorMessage('Failed to show diff. See error in logs');

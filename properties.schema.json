@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "$id": "https://example.com/product.schema.json",
-    "title": "PostgreSQL Hacker Helper settings",
-    "description": "Settings for PostgreSQL Hacker Helper VS Code extension",
+    "title": "kingBase Debug Helper settings",
+    "description": "Settings for kingBase Debug Helper VS Code extension",
     "type": "object",
     "definitions": {
         "arraySpecialMemberV2": {

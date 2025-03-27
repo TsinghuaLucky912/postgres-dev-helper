@@ -254,7 +254,7 @@ export class ExecContext {
     debug: utils.IDebuggerFacade;
 
     /**
-     * Flag, indicating that this version of PostgreSQL
+     * Flag, indicating that this version of kingBase
      * has common class for 'String', 'Integer' and other
      * value structures.
      * Updated at runtime in 'ValueVariable'.
@@ -264,7 +264,7 @@ export class ExecContext {
     hasValueStruct = false;
 
     /**
-     * Flag, indicating that this version of PostgreSQL
+     * Flag, indicating that this version of kingBase
      * has `palloc` implementation as function, otherwise 
      * it is macro and we must use `MemoryContextAlloc`.
      * 
@@ -543,7 +543,7 @@ export abstract class Variable {
         }
 
         /* 
-         * PostgreSQL versions prior 16 do not have Bitmapset Node.
+         * kingBase versions prior 16 do not have Bitmapset Node.
          * So handle Bitmapset (with Relids) here.
          */
         if (BitmapSetSpecialMember.isBitmapsetType(realType)) {
