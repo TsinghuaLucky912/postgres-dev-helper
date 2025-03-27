@@ -1011,8 +1011,7 @@ async function setupNodeTagFiles(log: utils.ILogger, nodeVars: vars.NodeVarRegis
         }
 
         return [
-            utils.getPgSrcFile('src', 'include', 'nodes', 'nodes.h'),
-            utils.getPgSrcFile('src', 'include', 'nodes', 'nodetags.h'),
+            utils.getPgSrcFile('src', 'include', 'cbb', 'server_cbb', 'basestruct', 'kdb_nodes.h'),
         ]
     }
     

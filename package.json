@@ -2,7 +2,7 @@
     "name": "postgresql-hacker-helper",
     "displayName": "PostgreSQL Hacker Helper",
     "description": "Extension to assist Postgres hackers - source code developers",
-    "version": "1.8.0",
+    "version": "0.0.1",
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -14,14 +14,13 @@
     "icon": "resources/logo.png",
     "activationEvents": [
         "workspaceContains:.vscode/pgsql_hacker_helper.json",
-        "workspaceContains:**/src/include/nodes/nodes.h",
-        "workspaceContains:**/src/include/nodes/nodetags.h"
+        "workspaceContains:**/src/include/cbb/server_cbb/basestruct/kdb_nodes.h"
     ],
     "main": "./out/entrypoint.js",
-    "publisher": "ash-blade",
+    "publisher": "TsinghuaLucky912",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ashenBlade/postgres-dev-helper.git"
+        "url": "https://github.com/TsinghuaLucky912/postgres-dev-helper.git"
     },
     "keywords": [
         "PostgreSQL",
@@ -179,7 +178,7 @@
     },
     "devDependencies": {
         "@types/mocha": "^10.0.7",
-        "@types/node": "20.x",
+        "@types/node": "^20.17.28",
         "@types/vscode": "^1.30.0",
         "@typescript-eslint/eslint-plugin": "^7.14.1",
         "@typescript-eslint/parser": "^7.11.0",
