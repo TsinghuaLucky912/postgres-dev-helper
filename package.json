@@ -2,7 +2,7 @@
     "name": "kingbase-debug-helper",
     "displayName": "kingBase Debug Helper",
     "description": "Extension to assist Postgres hackers - source code developers",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.30.0"
     },
@@ -39,44 +39,38 @@
                 "command": "kingbase-debug-helper.dumpNodeToLog",
                 "title": "Dump Node to stdout",
                 "shortTitle": "Dump Node to stdout",
-                "category": "PgSQL"
+                "category": "Ksql"
             },
             {
                 "command": "kingbase-debug-helper.openConfigurationFile",
                 "title": "Open or create configuration file (JSON)",
                 "shortTitle": "Open configuration file",
-                "category": "PgSQL"
+                "category": "Ksql"
             },
             {
                 "command": "kingbase-debug-helper.refreshPostgresVariablesView",
                 "title": "Refresh Postgres variables view",
                 "shortTitle": "Refresh variables view",
-                "category": "PgSQL",
+                "category": "Ksql",
                 "icon": "$(refresh)"
             },
             {
                 "command": "kingbase-debug-helper.refreshConfigFile",
                 "title": "Refresh configuration file",
                 "shortTitle": "Refresh config file",
-                "category": "PgSQL"
+                "category": "Ksql"
             },
             {
                 "command": "kingbase-debug-helper.formatterShowDiff",
                 "title": "Show diff preview for kingBase formatter",
                 "shortTitle": "Diff kingBase formatter",
-                "category": "PgSQL"
-            },
-            {
-                "command": "kingbase-debug-helper.bootstrapExtension",
-                "title": "Bootstrap extension",
-                "shortTitle": "Bootstrap extension",
-                "category": "PgSQL"
+                "category": "Ksql"
             },
             {
                 "command": "kingbase-debug-helper.addVariableToWatch",
                 "title": "Add Variable to Watch",
                 "shortTitle": "Add to Watch",
-                "category": "PgSQL"
+                "category": "Ksql"
             }
         ],
         "menus": {
